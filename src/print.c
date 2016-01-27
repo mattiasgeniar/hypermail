@@ -713,7 +713,7 @@ void printcomment(FILE *fp, char *label, char *value)
                         ext_value = PUSH_STRING(retbuf);
                 }
 
-                fprintf(fp, "<!-- %s=\"%s\" -->\n", ext_label, ext_value);
+                //fprintf(fp, "<!-- %s=\"%s\" -->\n", ext_label, ext_value);
                 if (ext_label != label)
                         free(ext_label);
                 if (ext_value != value)
@@ -1591,14 +1591,14 @@ int print_links_up(FILE *fp, struct emailinfo *email, int pos, int in_thread_fil
                         ptr = "navbar";
                 else
                         ptr = "navbarfoot";
-                fprintf(fp, "<map id=\"%s\" name=\"%s\">\n", ptr, ptr);
-                if (pos == PAGE_TOP)
-                        fprintf(fp, "<ul class=\"links\">\n");
+                //fprintf(fp, "<map id=\"%s\" name=\"%s\">\n", ptr, ptr);
+                //if (pos == PAGE_TOP)
+                //        fprintf(fp, "<ul class=\"links\">\n");
 
-                fprintf(fp, "<li>\n");
-                fprintf(fp, "<dfn>%s</dfn>:\n", lang[MSG_THIS_MESSAGE]);
-                fprintf(fp, "[ <a href=\"#start%d\" name=\"options1\" id=\"options1\" tabindex=\"1\">"
-                        "%s</a> ]\n", email->msgnum, lang[MSG_MSG_BODY]);
+                //fprintf(fp, "<li>\n");
+                //fprintf(fp, "<dfn>%s</dfn>:\n", lang[MSG_THIS_MESSAGE]);
+                //fprintf(fp, "[ <a href=\"#start%d\" name=\"options1\" id=\"options1\" tabindex=\"1\">"
+                //        "%s</a> ]\n", email->msgnum, lang[MSG_MSG_BODY]);
                 if (set_mailcommand && set_hmail) {
                         if ((email->msgid && email->msgid[0]) || (email->subject && email->subject[0])) {
 #ifdef HAVE_ICONV
@@ -1612,7 +1612,7 @@ int print_links_up(FILE *fp, struct emailinfo *email, int pos, int in_thread_fil
                                 ptr = makemailcommand(set_replymsg_command, set_hmail, email->msgid,
                                                       email->subject);
 #endif
-                                fprintf(fp, " [ <a href=\"%s\" accesskey=\"r\" title=\"%s\">%s</a> ]\n",
+                                //fprintf(fp, " [ <a href=\"%s\" accesskey=\"r\" title=\"%s\">%s</a> ]\n",
                                         ptr, lang[MSG_MA_REPLY], lang[MSG_RESPOND]);
                                 if (ptr)
                                         free(ptr);
@@ -1622,16 +1622,16 @@ int print_links_up(FILE *fp, struct emailinfo *email, int pos, int in_thread_fil
                 case 0:
                         break;
                 case 1:
-                        fprintf(fp, " [ %s (<a href=\"#options2\">top</a>, <a href=\"#options3\">bottom</a>) ]\n", lang[MSG_MORE_OPTIONS]);
+                        //fprintf(fp, " [ %s (<a href=\"#options2\">top</a>, <a href=\"#options3\">bottom</a>) ]\n", lang[MSG_MORE_OPTIONS]);
                         break;
                 case 3:
-                        fprintf(fp, " [ <a href=\"#options2\">%s</a> ]\n", lang[MSG_MORE_OPTIONS]);
+                        //fprintf(fp, " [ <a href=\"#options2\">%s</a> ]\n", lang[MSG_MORE_OPTIONS]);
                         break;
                 case 4:
-                        fprintf(fp, " [ <a href=\"#options3\">%s</a> ]\n", lang[MSG_MORE_OPTIONS]);
+                        //fprintf(fp, " [ <a href=\"#options3\">%s</a> ]\n", lang[MSG_MORE_OPTIONS]);
                         break;
                 }
-                fprintf(fp, "</li>\n");
+                //fprintf(fp, "</li>\n");
 
                 fprintf(fp, "<li>\n");
                 fprintf(fp, "<dfn>%s</dfn>:\n", lang[MSG_RELATED_MESSAGES]);
@@ -1651,10 +1651,10 @@ int print_links_up(FILE *fp, struct emailinfo *email, int pos, int in_thread_fil
                         ptr = convchars(email2->subject, email2->charset);
                         tmpptr= convchars(email2->name,email2->charset);
 #endif
-                        fprintf(fp, "[ <a href=\"%s\" accesskey=\"d\" title=\"%s: &quot;%s&quot;\">%s</a> ]\n",
+                        /*fprintf(fp, "[ <a href=\"%s\" accesskey=\"d\" title=\"%s: &quot;%s&quot;\">%s</a> ]\n",
                                 msg_href (email2, email, FALSE),
                                 tmpptr, ptr ? ptr : "",
-                                lang[MSG_NEXT_MESSAGE]);
+                                lang[MSG_NEXT_MESSAGE]);*/
                         if (tmpptr)
                                 free(tmpptr);
                         if (ptr)
@@ -1681,10 +1681,10 @@ int print_links_up(FILE *fp, struct emailinfo *email, int pos, int in_thread_fil
                         ptr = convchars(email2->subject, email2->charset);
                         tmpptr=convchars(email2->name,email2->charset);
 #endif
-                        fprintf(fp, "[ <a href=\"%s\" title=\"%s: &quot;%s&quot;\">%s</a> ]\n",
+                        /*fprintf(fp, "[ <a href=\"%s\" title=\"%s: &quot;%s&quot;\">%s</a> ]\n",
                                 msg_relpath(email2, email),
                                 tmpptr, ptr ? ptr : "",
-                                lang[MSG_PREVIOUS_MESSAGE]);
+                                lang[MSG_PREVIOUS_MESSAGE]);*/
                         if (ptr)
                                 free(ptr);
                         if (tmpptr)
@@ -1710,10 +1710,10 @@ int print_links_up(FILE *fp, struct emailinfo *email, int pos, int in_thread_fil
                                 ptr = convchars(email2->subject, email2->charset);
                                 tmpptr=convchars(email2->name,email2->charset);
 #endif
-                                fprintf(fp, "[ <a href=\"%s\" title=\"%s%s: &quot;%s&quot;\">%s</a> ]\n",
+                                /*fprintf(fp, "[ <a href=\"%s\" title=\"%s%s: &quot;%s&quot;\">%s</a> ]\n",
                                         href01(email, email2, in_thread_file, FALSE),
                                         del_msg, tmpptr, ptr ? ptr : "",
-                                        (subjmatch) ? lang[MSG_MAYBE_IN_REPLY_TO] : lang[MSG_IN_REPLY_TO]);
+                                        (subjmatch) ? lang[MSG_MAYBE_IN_REPLY_TO] : lang[MSG_IN_REPLY_TO]);*/
                                 if (ptr)
                                         free (ptr);
                                 if (tmpptr)
@@ -1725,10 +1725,10 @@ int print_links_up(FILE *fp, struct emailinfo *email, int pos, int in_thread_fil
                                 tmpptr = makeinreplytocommand(set_inreplyto_command, email->inreplyto);
                                 if (tmpptr) {
                                         /* use an msgid resolver */
-                                        fprintf(fp, "[ <a href=\"%s\"  title=\"%s\">%s</a> ]\n",
+                                        /*fprintf(fp, "[ <a href=\"%s\"  title=\"%s\">%s</a> ]\n",
                                                 tmpptr,
                                                 lang[MSG_UNKNOWN_IN_REPLY_TO],
-                                                lang[MSG_IN_REPLY_TO]);
+                                                lang[MSG_IN_REPLY_TO]);*/
                                         free (tmpptr);
                                 }
                         }
@@ -1747,10 +1747,10 @@ int print_links_up(FILE *fp, struct emailinfo *email, int pos, int in_thread_fil
                         ptr = convchars(email_next_in_thread->subject, email_next_in_thread->charset);
                         tmpptr=convchars(email_next_in_thread->name,email_next_in_thread->charset);
 #endif
-                        fprintf(fp, "[ <a href=\"%s\" accesskey=\"t\" title=\"%s: &quot;%s&quot;\">%s</a> ]\n",
+                        /*fprintf(fp, "[ <a href=\"%s\" accesskey=\"t\" title=\"%s: &quot;%s&quot;\">%s</a> ]\n",
                                 href01(email, email_next_in_thread, in_thread_file, FALSE),
                                 tmpptr, ptr,
-                                lang[MSG_NEXT_IN_THREAD]);
+                                lang[MSG_NEXT_IN_THREAD]);*/
                         if (ptr)
                                 free(ptr);
                         if (tmpptr)
