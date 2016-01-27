@@ -1613,7 +1613,7 @@ int print_links_up(FILE *fp, struct emailinfo *email, int pos, int in_thread_fil
                                                       email->subject);
 #endif
                                 //fprintf(fp, " [ <a href=\"%s\" accesskey=\"r\" title=\"%s\">%s</a> ]\n",
-                                        ptr, lang[MSG_MA_REPLY], lang[MSG_RESPOND]);
+                                //        ptr, lang[MSG_MA_REPLY], lang[MSG_RESPOND]);
                                 if (ptr)
                                         free(ptr);
                         }
