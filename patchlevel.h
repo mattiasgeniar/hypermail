@@ -1,2 +1,2 @@
-#define VERSION "2.3.0"
+#define VERSION "2.4.0"
 #define PATCHLEVEL "1"
