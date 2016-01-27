@@ -303,23 +303,23 @@ void fprint_menu0(FILE *fp, struct emailinfo *email, int pos)
                 //if (!(set_mailcommand && set_hmail))
                 //        fprintf (fp, "<a name=\"%s\" id=\"%s\"></a>",id,id);
                 /*fprintf(fp, "<dfn>%s</dfn>:", lang[MSG_CONTEMPORARY_MSGS_SORTED]);*/
-                if (show_index[dlev][DATE_INDEX])
+                //if (show_index[dlev][DATE_INDEX])
                         /*fprintf(fp, " [ <a href=\"%s#%s%d\" title=\"%s\">%s</a> ]",
                                 index_name[dlev][DATE_INDEX], set_fragment_prefix, num,
                                 lang[MSG_LTITLE_BY_DATE], lang[MSG_BY_DATE]);*/
-                if (show_index[dlev][THREAD_INDEX])
+                //if (show_index[dlev][THREAD_INDEX])
                         /*fprintf(fp, " [ <a href=\"%s#%s%d\" title=\"%s\">%s</a> ]",
                                 index_name[dlev][THREAD_INDEX], set_fragment_prefix, num,
                                 lang[MSG_LTITLE_BY_THREAD], lang[MSG_BY_THREAD]);*/
-                if (show_index[dlev][SUBJECT_INDEX])
+                //if (show_index[dlev][SUBJECT_INDEX])
                         /*fprintf(fp, " [ <a href=\"%s#%s%d\" title=\"%s\">%s</a> ]",
                                 index_name[dlev][SUBJECT_INDEX], set_fragment_prefix, num,
                                 lang[MSG_LTITLE_BY_SUBJECT], lang[MSG_BY_SUBJECT]);*/
-                if (show_index[dlev][AUTHOR_INDEX])
+                //if (show_index[dlev][AUTHOR_INDEX])
                         /*fprintf(fp, " [ <a href=\"%s#%s%d\" title=\"%s\">%s</a> ]",
                                 index_name[dlev][AUTHOR_INDEX], set_fragment_prefix, num,
                                 lang[MSG_LTITLE_BY_AUTHOR], lang[MSG_BY_AUTHOR]);*/
-                if (show_index[dlev][ATTACHMENT_INDEX])
+                //if (show_index[dlev][ATTACHMENT_INDEX])
                         /*fprintf(fp, " [ <a href=\"%s\" title=\"%s\">%s</a> ]",
                                 index_name[dlev][ATTACHMENT_INDEX],
                                 lang[MSG_LTITLE_BY_ATTACHMENT], lang[MSG_BY_ATTACHMENT]);*/
